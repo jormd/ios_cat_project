@@ -8,16 +8,16 @@
 
 import UIKit
 import Alamofire
+import AVFoundation
 
 class ViewController: UIViewController {
     
     var listCatFact: [Cat] = []
-        /*[
-        Cat(factCat: "claude", idCat: "1", image: ""),
-        Cat(factCat: "bernard", idCat: "2", image: ""),
-    ]*/
+    var catSound: AVAudioPlayer?
+    let listOfCatSound = ["cat1.mp3", "cat2.mp3", "cat3.mp3", "cat4.mp3", "cat5.mp3"]
 
     @IBOutlet weak var catTableView: UITableView!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,22 +35,39 @@ class ViewController: UIViewController {
         getCatFacts()
         getCatPicture()
     }
+    
+    func playCatSound() {
+         let catSoundField = listOfCatSound.randomElement()
+         print(catSoundField)
+         
+         let path = Bundle.main.path(forResource: catSoundField, ofType:nil)!
+         let url = URL(fileURLWithPath: path)
+         do {
+             catSound = try AVAudioPlayer(contentsOf: url)
+             catSound?.stop()
+             catSound?.play()
+         } catch {
+             // couldn't load file
+         }
+     }
 
     
     private func getCatFacts(){
+        self.loader.startAnimating()
         let apiFactsUrl = "https://cat-fact.herokuapp.com/facts"        
         AF.request(apiFactsUrl, method: .get).responseDecodable { [weak self] (response: DataResponse<AllCat, AFError>) in
             switch response.result {
             case .success(let catFacts):
                 for catFact in catFacts.all ?? [] {
-                    
                     self?.listCatFact.append(Cat(text: catFact.text, _id: catFact._id, image: ""))
-                    
                 }
                 self?.catTableView.reloadData()
+                self?.loader.stopAnimating()
+
             case .failure(let error):
                 print(error.errorDescription ?? "")
-                
+                self?.loader.stopAnimating()
+
             }
         }
     }
@@ -72,7 +89,6 @@ class ViewController: UIViewController {
                 }
                 
                 self?.catTableView.reloadData()
-
             case .failure(let error):
                 print("no")
                 print(error.errorDescription ?? "")
@@ -84,7 +100,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //selectCatFact = listCatFact[indexPath.row]        
+        playCatSound()
     }
 }
 

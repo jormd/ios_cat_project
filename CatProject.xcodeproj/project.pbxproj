@@ -17,6 +17,11 @@
 		1E73EA7523D706670090A18F /* CatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73EA7423D706670090A18F /* CatTableViewCell.swift */; };
 		1E73EA7823D707300090A18F /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73EA7723D707300090A18F /* Cat.swift */; };
 		1E73EA7A23D712690090A18F /* AllCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73EA7923D712690090A18F /* AllCat.swift */; };
+		1E78D7BB23D743C90019FE46 /* cat2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E78D7B823D743C90019FE46 /* cat2.mp3 */; };
+		1E78D7BC23D743C90019FE46 /* cat3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E78D7B923D743C90019FE46 /* cat3.mp3 */; };
+		1E78D7BD23D743CA0019FE46 /* cat1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E78D7BA23D743C90019FE46 /* cat1.mp3 */; };
+		1E78D7BF23D744D20019FE46 /* cat4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E78D7BE23D744D20019FE46 /* cat4.mp3 */; };
+		1E78D7C123D744D80019FE46 /* cat5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E78D7C023D744D80019FE46 /* cat5.mp3 */; };
 		484D77905E1C2EA636B80924 /* Pods_CatProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A8DEB63F5C5D685B29E10C /* Pods_CatProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +38,11 @@
 		1E73EA7423D706670090A18F /* CatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTableViewCell.swift; sourceTree = "<group>"; };
 		1E73EA7723D707300090A18F /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		1E73EA7923D712690090A18F /* AllCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCat.swift; sourceTree = "<group>"; };
+		1E78D7B823D743C90019FE46 /* cat2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cat2.mp3; sourceTree = "<group>"; };
+		1E78D7B923D743C90019FE46 /* cat3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cat3.mp3; sourceTree = "<group>"; };
+		1E78D7BA23D743C90019FE46 /* cat1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cat1.mp3; sourceTree = "<group>"; };
+		1E78D7BE23D744D20019FE46 /* cat4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cat4.mp3; sourceTree = "<group>"; };
+		1E78D7C023D744D80019FE46 /* cat5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cat5.mp3; sourceTree = "<group>"; };
 		76A8DEB63F5C5D685B29E10C /* Pods_CatProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7E75EBD3D82E1BD732C1FA /* Pods-CatProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatProject.debug.xcconfig"; path = "Target Support Files/Pods-CatProject/Pods-CatProject.debug.xcconfig"; sourceTree = "<group>"; };
 		A92B5B0513692BC13A40E27B /* Pods-CatProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatProject.release.xcconfig"; path = "Target Support Files/Pods-CatProject/Pods-CatProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +60,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E026D2A23D7420A0042E2CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1E78D7BE23D744D20019FE46 /* cat4.mp3 */,
+				1E73EA6823D6FF3F0090A18F /* Assets.xcassets */,
+				1E78D7C023D744D80019FE46 /* cat5.mp3 */,
+				1E78D7BA23D743C90019FE46 /* cat1.mp3 */,
+				1E78D7B823D743C90019FE46 /* cat2.mp3 */,
+				1E78D7B923D743C90019FE46 /* cat3.mp3 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1E73EA5323D6FF3E0090A18F = {
 			isa = PBXGroup;
 			children = (
@@ -71,13 +94,13 @@
 		1E73EA5E23D6FF3E0090A18F /* CatProject */ = {
 			isa = PBXGroup;
 			children = (
+				1E026D2A23D7420A0042E2CD /* Resources */,
 				1E73EA7623D7071F0090A18F /* Model */,
 				1E73EA7323D706410090A18F /* Cells */,
 				1E73EA5F23D6FF3E0090A18F /* AppDelegate.swift */,
 				1E73EA6123D6FF3E0090A18F /* SceneDelegate.swift */,
 				1E73EA6323D6FF3E0090A18F /* ViewController.swift */,
 				1E73EA6523D6FF3E0090A18F /* Main.storyboard */,
-				1E73EA6823D6FF3F0090A18F /* Assets.xcassets */,
 				1E73EA6A23D6FF3F0090A18F /* LaunchScreen.storyboard */,
 				1E73EA6D23D6FF3F0090A18F /* Info.plist */,
 			);
@@ -179,9 +202,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E78D7BB23D743C90019FE46 /* cat2.mp3 in Resources */,
+				1E78D7BF23D744D20019FE46 /* cat4.mp3 in Resources */,
+				1E78D7C123D744D80019FE46 /* cat5.mp3 in Resources */,
+				1E78D7BC23D743C90019FE46 /* cat3.mp3 in Resources */,
 				1E73EA6C23D6FF3F0090A18F /* LaunchScreen.storyboard in Resources */,
 				1E73EA6923D6FF3F0090A18F /* Assets.xcassets in Resources */,
 				1E73EA6723D6FF3E0090A18F /* Main.storyboard in Resources */,
+				1E78D7BD23D743CA0019FE46 /* cat1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
