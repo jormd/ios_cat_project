@@ -44,7 +44,7 @@ class CatTableViewCell: UITableViewCell {
         idCat = cat._id
         
         if(UserDefaults.standard.array(forKey: "fav") != nil){
-            var ids = UserDefaults.standard.array(forKey: "fav") as! [String]
+            let ids = UserDefaults.standard.array(forKey: "fav") as! [String]
             
             if(find(value: idCat, in: ids  ) != nil){
                 self.BtnFav.setBackgroundImage(UIImage(named: "star_fav"), for: .normal)

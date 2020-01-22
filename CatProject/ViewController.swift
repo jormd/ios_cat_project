@@ -77,9 +77,9 @@ class ViewController: UIViewController {
         AF.request(apiPictureUrl, method: .get).responseDecodable { [weak self] (response: DataResponse<[PictureCat], AFError>) in
             switch response.result{
             case .success(let pictureCat):
-                for (index, listCat) in (self?.listCatFact.enumerated())!{
+                for listCat in self?.listCatFact ?? []{
                     
-                    var indexPictureCat = Int.random(in: 0..<99)
+                    let indexPictureCat = Int.random(in: 0..<99)
                     
                     listCat.image = pictureCat[indexPictureCat].url
 

@@ -33,7 +33,7 @@ class FavorisViewController: UIViewController {
     }
 
     private func getCatFacts(){
-        var ids = UserDefaults.standard.array(forKey: "fav") ?? []
+        let ids = UserDefaults.standard.array(forKey: "fav") ?? []
         
         for id in ids{
             let apiFactsUrl = "https://cat-fact.herokuapp.com/facts/\(id)"
@@ -64,9 +64,9 @@ class FavorisViewController: UIViewController {
         AF.request(apiPictureUrl, method: .get).responseDecodable { [weak self] (response: DataResponse<[PictureCat], AFError>) in
             switch response.result{
             case .success(let pictureCat):
-                for (index, listCat) in (self?.listCatFactFav.enumerated())!{
+                for listCat in self?.listCatFactFav ?? []{
                     
-                    var indexPictureCat = Int.random(in: 1..<99)
+                    let indexPictureCat = Int.random(in: 1..<99)
                     listCat.image = pictureCat[indexPictureCat].url
 
                 }
