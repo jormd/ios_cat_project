@@ -31,9 +31,14 @@ class ViewController: UIViewController {
         catTableView.estimatedRowHeight = 100
     }
     
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showFavoriForList"{
+            let detailVC = segue.destination as? FavorisViewController
+        }
+    }*/
+    
     func setup(){
         getCatFacts()
-        getCatPicture()
     }
     
     func playCatSound() {
@@ -61,8 +66,7 @@ class ViewController: UIViewController {
                 for catFact in catFacts.all ?? [] {
                     self?.listCatFact.append(Cat(text: catFact.text, _id: catFact._id, image: ""))
                 }
-                self?.catTableView.reloadData()
-                self?.loader.stopAnimating()
+                self?.getCatPicture()
 
             case .failure(let error):
                 print(error.errorDescription ?? "")
@@ -82,15 +86,14 @@ class ViewController: UIViewController {
             case .success(let pictureCat):
                 for (index, listCat) in (self?.listCatFact.enumerated())!{
                     
-                    var indexPictureCat = Int.random(in: 0..<100)
+                    var indexPictureCat = Int.random(in: 0..<99)
                     
                     listCat.image = pictureCat[indexPictureCat].url
 
                 }
-                
+                self?.loader.stopAnimating()
                 self?.catTableView.reloadData()
             case .failure(let error):
-                print("no")
                 print(error.errorDescription ?? "")
             }
         }

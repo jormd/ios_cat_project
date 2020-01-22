@@ -22,6 +22,8 @@
 		1E78D7BD23D743CA0019FE46 /* cat1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E78D7BA23D743C90019FE46 /* cat1.mp3 */; };
 		1E78D7BF23D744D20019FE46 /* cat4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E78D7BE23D744D20019FE46 /* cat4.mp3 */; };
 		1E78D7C123D744D80019FE46 /* cat5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E78D7C023D744D80019FE46 /* cat5.mp3 */; };
+		1E78D7C323D754D60019FE46 /* FavorisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E78D7C223D754D60019FE46 /* FavorisViewController.swift */; };
+		1EC8AEBE23D78D99003FC985 /* CatFavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8AEBD23D78D99003FC985 /* CatFavTableViewCell.swift */; };
 		484D77905E1C2EA636B80924 /* Pods_CatProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A8DEB63F5C5D685B29E10C /* Pods_CatProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		1E78D7BA23D743C90019FE46 /* cat1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cat1.mp3; sourceTree = "<group>"; };
 		1E78D7BE23D744D20019FE46 /* cat4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cat4.mp3; sourceTree = "<group>"; };
 		1E78D7C023D744D80019FE46 /* cat5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cat5.mp3; sourceTree = "<group>"; };
+		1E78D7C223D754D60019FE46 /* FavorisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorisViewController.swift; sourceTree = "<group>"; };
+		1EC8AEBD23D78D99003FC985 /* CatFavTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFavTableViewCell.swift; sourceTree = "<group>"; };
 		76A8DEB63F5C5D685B29E10C /* Pods_CatProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7E75EBD3D82E1BD732C1FA /* Pods-CatProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatProject.debug.xcconfig"; path = "Target Support Files/Pods-CatProject/Pods-CatProject.debug.xcconfig"; sourceTree = "<group>"; };
 		A92B5B0513692BC13A40E27B /* Pods-CatProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatProject.release.xcconfig"; path = "Target Support Files/Pods-CatProject/Pods-CatProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 				1E73EA6523D6FF3E0090A18F /* Main.storyboard */,
 				1E73EA6A23D6FF3F0090A18F /* LaunchScreen.storyboard */,
 				1E73EA6D23D6FF3F0090A18F /* Info.plist */,
+				1E78D7C223D754D60019FE46 /* FavorisViewController.swift */,
 			);
 			path = CatProject;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				1E73EA7423D706670090A18F /* CatTableViewCell.swift */,
+				1EC8AEBD23D78D99003FC985 /* CatFavTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -266,9 +272,11 @@
 				1E026D2923D729220042E2CD /* PictureCat.swift in Sources */,
 				1E73EA7523D706670090A18F /* CatTableViewCell.swift in Sources */,
 				1E73EA6423D6FF3E0090A18F /* ViewController.swift in Sources */,
+				1EC8AEBE23D78D99003FC985 /* CatFavTableViewCell.swift in Sources */,
 				1E73EA7823D707300090A18F /* Cat.swift in Sources */,
 				1E73EA6023D6FF3E0090A18F /* AppDelegate.swift in Sources */,
 				1E73EA6223D6FF3E0090A18F /* SceneDelegate.swift in Sources */,
+				1E78D7C323D754D60019FE46 /* FavorisViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQ356TCP5C;
 				INFOPLIST_FILE = CatProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -432,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQ356TCP5C;
 				INFOPLIST_FILE = CatProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
