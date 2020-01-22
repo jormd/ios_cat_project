@@ -58,7 +58,7 @@ class CatTableViewCell: UITableViewCell {
         textLabelCat.text = cat.text
                 
         let catUrl = URL(string: cat.image ?? "")
-        imageCat.kf.setImage(with: catUrl, placeholder: UIImage(named: "téléchargement"), options: [.transition(.fade(1))])
+        imageCat.kf.setImage(with: catUrl, placeholder: UIImage(named: "telechargement"), options: [.transition(.fade(1))])
     }
     
     func find(value searchValue: String, in array: [String]) -> Int?
