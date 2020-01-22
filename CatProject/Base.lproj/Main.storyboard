@@ -45,9 +45,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RID-OL-qcW">
-                                                    <rect key="frame" x="351" y="11" width="41" height="30"/>
+                                                    <rect key="frame" x="357" y="11" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Favori"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="btnFavori:" destination="weL-MV-uOw" eventType="touchUpInside" id="0x4-78-pzQ"/>
                                                     </connections>
@@ -65,6 +68,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="BtnFav" destination="RID-OL-qcW" id="GCj-y0-0lI"/>
                                             <outlet property="ImageCat" destination="TR5-cJ-SGV" id="s2h-9Y-ldw"/>
                                             <outlet property="imageCat" destination="TR5-cJ-SGV" id="GBZ-Xy-YeG"/>
                                             <outlet property="textLabelCat" destination="3b4-fd-GmP" id="L8S-Bq-DqI"/>
@@ -77,7 +81,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Fact Cat" id="tux-lH-2za">
-                                        <barButtonItem key="rightBarButtonItem" title="Favori" id="LGE-O3-rPb">
+                                        <barButtonItem key="rightBarButtonItem" title="Favoris" id="LGE-O3-rPb">
                                             <connections>
                                                 <segue destination="Ivf-4e-76v" kind="show" id="2Vo-TF-9zq"/>
                                             </connections>

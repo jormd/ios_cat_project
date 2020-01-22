@@ -31,19 +31,12 @@ class ViewController: UIViewController {
         catTableView.estimatedRowHeight = 100
     }
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showFavoriForList"{
-            let detailVC = segue.destination as? FavorisViewController
-        }
-    }*/
-    
     func setup(){
         getCatFacts()
     }
     
     func playCatSound() {
          let catSoundField = listOfCatSound.randomElement()
-         print(catSoundField)
          
          let path = Bundle.main.path(forResource: catSoundField, ofType:nil)!
          let url = URL(fileURLWithPath: path)

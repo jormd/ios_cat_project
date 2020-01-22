@@ -22,7 +22,7 @@ class CatFavTableViewCell: UITableViewCell {
         labelCatFav.text = cat.text
         
         let catUrl = URL(string: cat.image ?? "")
-        imageFavCat.kf.setImage(with: catUrl)
+        imageFavCat.kf.setImage(with: catUrl, placeholder: UIImage(named: "téléchargement"), options: [.transition(.fade(1))])
     }
 
 }
